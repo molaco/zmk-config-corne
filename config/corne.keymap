@@ -68,17 +68,17 @@
         //                             &trans    &trans     &trans      &trans    &trans    &trans
         //     >;
         // };
-        //
-        // // Navigation Layer (equivalent to _NAV)
-        // nav_layer {
-        //     bindings = <
-        //         // &trans    &kp ESC   &trans    &tog 4    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
-        //         &trans    &kp ESC   &trans    &trans    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
-        //         &trans    &kp LSHFT &kp LCTRL &kp LALT  &kp LGUI  &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
-        //         &trans    &trans    &trans    &trans    &trans    &trans    &kp RET   &trans    &kp PGUP  &kp PGDN  &kp CAPS  &trans
-        //                             &trans    &trans    &trans      &trans    &trans    &trans
-        //     >;
-        // };
+
+        // Navigation Layer (equivalent to _NAV)
+        nav_layer {
+            bindings = <
+                // &trans    &kp ESC   &trans    &tog 4    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
+                &trans    &kp ESC   &trans    &trans    &trans    &kp K_PP  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
+                &trans    &kp LSHFT &kp LCTRL &kp LALT  &kp LGUI  &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans    &kp RET   &trans    &kp PG_UP &kp PG_DN &trans    &trans
+                                    &trans    &trans    &trans      &trans    &trans    &trans
+            >;
+        };
 
         // // Symbol Layer (equivalent to _SYM)
         // sym_layer {
