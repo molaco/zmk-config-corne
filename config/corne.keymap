@@ -93,7 +93,7 @@
 
         misc_layer {
             bindings = <
-                &trans &trans          &trans          &trans         &tog MISC       &trans        &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans          &trans          &trans         &tog DEFAULT    &trans        &trans &trans &trans &trans &trans &trans &trans
                 &trans &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3  &trans &trans &trans &trans &trans &trans &trans
                 &trans &rgb_ug RGB_TOG &rgb_ug RGB_OFF &rgb_ug RGB_ON &rgb_ug RGB_BRI &trans        &trans &trans &trans &trans &trans &trans &trans
                                                                         &trans &trans &trans &trans &trans &trans
