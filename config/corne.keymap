@@ -26,24 +26,24 @@
 };
 
 / {
-    // conditional_layers {
-    //     compatible = "zmk,conditional-layers";
-    //     tri_layer {
-    //         if-layers = <1 2>;
-    //         then-layer = <3>;
-    //     };
-    // };
-    //
-    // behaviors {
-    //   skq: sticky_key_quick_release {
-    //     compatible = "zmk,behavior-sticky-key";
-    //     #binding-cells = <1>;
-    //     bindings = <&kp>;
-    //     release-after-ms = <1000>;
-    //     quick-release;
-    //     ignore-modifiers;
-    //   };
-    // };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
+    behaviors {
+      skq: sticky_key_quick_release {
+        compatible = "zmk,behavior-sticky-key";
+        #binding-cells = <1>;
+        bindings = <&kp>;
+        release-after-ms = <1000>;
+        quick-release;
+        ignore-modifiers;
+      };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -73,10 +73,10 @@
         nav_layer {
             bindings = <
                 // &trans    &kp ESC   &trans    &tog 4    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
-                &trans    &kp ESC   &trans    &trans    &trans    &kp K_PP  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
-                &trans    &kp LSHFT &kp LCTRL &kp LALT  &kp LGUI  &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
-                &trans    &trans    &trans    &trans    &trans    &trans    &kp RET   &trans    &kp PG_UP &kp PG_DN &trans    &trans
-                                    &trans    &trans    &trans      &trans    &trans    &trans
+                &trans    &kp ESC    &trans      &trans    &trans    &kp K_PP  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
+                &trans    &skq LSHFT &skq LCTRL  &skq LALT &skq LGUI &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
+                &trans    &trans     &trans      &trans    &trans    &trans    &kp RET   &trans    &kp PG_UP &kp PG_DN &trans    &trans
+                                     &trans    &trans      &trans    &trans    &trans    &trans
             >;
         };
 
