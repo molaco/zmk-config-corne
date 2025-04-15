@@ -16,10 +16,10 @@
 #include <dt-bindings/zmk/reset.h>
 
 #define DEFAULT 0
-#define NAV     1
-#define SYM     2
+#define SYM     1
+#define NAV     2
 #define NUM     3
-#define FUN     4
+// #define FUN     4
 
 &led_strip {
     chain-length = <27>;
@@ -54,7 +54,7 @@
                 &kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T       &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
                 &kp LSHFT &kp A     &kp S     &kp D     &kp F     &kp G       &kp H     &kp J     &kp K     &kp L     &kp TILDE &kp RET
                 &kp LCTRL &kp Z     &kp X     &kp C     &kp V     &kp B       &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp CAPS
-                                    &kp LCTRL &mo 2     &kp LCTRL   &kp SPACE &mo 1     &kp SPACE
+                                    &kp LCTRL &mo NAV     &kp LCTRL   &kp SPACE &mo SYM     &kp SPACE
             >;
         };
 
@@ -64,7 +64,7 @@
                 &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp FSLH  &kp LPAR  &kp RPAR  &kp QMARK &kp IEXC  &trans
                 &trans    &kp PIPE  &kp QUOT  &kp DQT   &kp SEMI  &kp COLON  &kp BSLH  &kp LBKT  &kp RBKT  &kp AMPS  &kp TILDE &trans
                 &trans    &kp LT    &kp GT    &trans    &kp MINUS &kp UNDER  &kp CARET &kp LBRC  &kp RBRC  &trans    &trans    &trans
-                                    &trans    &mo 2     &trans      &trans    &trans    &trans
+                                    &trans    &trans     &trans      &trans    &trans    &trans
             >;
         };
 
@@ -75,12 +75,12 @@
                 &trans    &kp ESC   &trans    &trans    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
                 &trans    &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
                 &trans    &trans    &trans    &trans    &trans    &trans    &kp RET   &trans    &kp PGUP  &kp PGDN  &kp CAPS  &trans
-                                    &trans    &trans    &trans      &trans    &mo 1    &trans
+                                    &trans    &trans    &trans      &trans    &trans    &trans
             >;
         };
 
         // Number Layer (equivalent to _NUMB)
-        numb_layer {
+        num_layer {
             bindings = <
                 &trans    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
                 &trans    &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &kp F11   &kp F12   &kp PLUS  &kp EQUAL &kp ASTRK &trans    &trans
