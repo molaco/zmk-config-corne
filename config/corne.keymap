@@ -20,50 +20,68 @@
 };
 
 
-
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LSHFT &mo 1 &kp LCTRL   &kp SPACE &mo 2 &kp RET
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &rgb_ug RGB_TOG       &rgb_ug RGB_OFF       &rgb_ug RGB_ON       &rgb_ug RGB_BRI       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LSHFT     &trans       &kp LCTRL      &kp SPACE  &trans   &kp RET
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
+        // QWERTY Layer (default, equivalent to _QWERTY)
+        qwerty_layer {
+            bindings = <
+                &kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T       &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
+                &kp LSHFT &kp A     &kp S     &kp D     &kp F     &kp G       &kp H     &kp J     &kp K     &kp L     &kp TILDE &kp GRAVE
+                &kp LCTRL &kp Z     &kp X     &kp C     &kp V     &kp B       &kp N     &kp M     &kp COMMA &kp DOT   &kp QUOT  &kp CAPS
+                                    &kp LCTRL &mo 2     &kp LCTRL   &kp SPACE &mo 1     &kp SPACE
+            >;
         };
+
+        // Symbol Layer (equivalent to _SYM)
+        sym_layer {
+            bindings = <
+                &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp FSLH  &kp LPAR  &kp RPAR  &kp QMARK &kp IEXC  &trans
+                &trans    &kp PIPE  &kp QUOT  &kp DQT   &kp SEMI  &kp COLON  &kp BSLH  &kp LBKT  &kp RBKT  &kp AMPS  &kp TILDE &trans
+                &trans    &kp LT    &kp GT    &trans    &kp MINUS &kp UNDER  &kp CARET &kp LBRC  &kp RBRC  &trans    &trans    &trans
+                                    &trans    &mo 2     &trans      &trans    &trans    &trans
+            >;
+        };
+
+        // Navigation Layer (equivalent to _NAV)
+        nav_layer {
+            bindings = <
+                &trans    &kp ESC   &trans    &tog 4    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
+                &trans    &sk LSHFT &sk LCTRL &sk LALT  &sk LGUI  &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans    &kp RET   &trans    &kp PGUP  &kp PGDN  &kp CAPS  &trans
+                                    &trans    &trans    &trans      &trans    &mo 1    &trans
+            >;
+        };
+
+        // Number Layer (equivalent to _NUMB)
+        numb_layer {
+            bindings = <
+                &trans    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
+                &trans    &sk LSHFT &sk LCTRL &sk LALT  &sk LGUI  &kp F11   &kp F12   &kp PLUS  &kp EQUAL &kp ASTRK &trans    &trans
+                &trans    &kp F1    &kp F2    &kp F10   &kp DEL   &trans    &trans    &kp MINUS &trans    &trans    &trans    &trans
+                                    &trans    &trans    &trans      &trans    &trans    &trans
+            >;
+        };
+
+        // Placeholder for tri-layer activation (SYM + NAV -> NUMB)
+        // ZMK doesn't natively support tri-layer, so we leave NUMB as a separate layer
+
+        lower_layer {
+            bindings = <
+                &trans     &trans        &trans        &tog 4        &trans        &trans    &trans &trans &trans &trans &trans &trans
+                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &trans &trans &trans &trans &trans &trans
+                &rgb_ug RGB_TOG &rgb_ug RGB_OFF &rgb_ug RGB_ON &rgb_ug RGB_BRI &trans &trans &trans &trans &trans &trans &trans &trans
+                                                                        &trans &trans &trans &trans  &trans   &trans
+                        >;
+                };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 };
