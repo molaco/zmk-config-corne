@@ -54,20 +54,20 @@
                 &kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T       &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
                 &kp LSHFT &kp A     &kp S     &kp D     &kp F     &kp G       &kp H     &kp J     &kp K     &kp L     &kp TILDE &kp RET
                 &kp LCTRL &kp Z     &kp X     &kp C     &kp V     &kp B       &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp CAPS
-                                    &kp LCTRL &trans     &kp LCTRL   &kp SPACE &trans     &kp SPACE
-                                    // &kp LCTRL &mo NAV     &kp LCTRL   &kp SPACE &mo SYM     &kp SPACE
+                                    // &kp LCTRL &trans     &kp LCTRL   &kp SPACE &trans     &kp SPACE
+                                    &kp LCTRL &mo NAV     &kp LCTRL   &kp SPACE &mo SYM     &kp SPACE
             >;
         };
 
-        // // Symbol Layer (equivalent to _SYM)
-        // sym_layer {
-        //     bindings = <
-        //         &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp FSLH  &kp LPAR  &kp RPAR  &kp QMARK &kp IEXC  &trans
-        //         &trans    &kp PIPE  &kp QUOT  &kp DQT   &kp SEMI  &kp COLON  &kp BSLH  &kp LBKT  &kp RBKT  &kp AMPS  &kp TILDE &trans
-        //         &trans    &kp LT    &kp GT    &trans    &kp MINUS &kp UNDER  &kp CARET &kp LBRC  &kp RBRC  &trans    &trans    &trans
-        //                             &trans    &trans     &trans      &trans    &trans    &trans
-        //     >;
-        // };
+        // Symbol Layer (equivalent to _SYM)
+        sym_layer {
+            bindings = <
+                &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp FSLH  &kp LPAR  &kp RPAR  &kp QMARK &trans    &trans
+                &trans    &kp PIPE  &kp SQT   &kp DQT   &kp SEMI  &kp COLON  &kp BSLH  &kp LBKT  &kp RBKT  &kp AMPS  &kp TILDE &trans
+                &trans    &kp LT    &kp GT    &trans    &kp MINUS &kp UNDER  &kp CARET &kp LBRC  &kp RBRC  &trans    &trans    &trans
+                                    &trans    &trans     &trans      &trans    &trans    &trans
+            >;
+        };
 
         // Navigation Layer (equivalent to _NAV)
         nav_layer {
