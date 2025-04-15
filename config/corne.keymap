@@ -19,7 +19,7 @@
 #define SYM     1
 #define NAV     2
 #define NUM     3
-// // #define FUN     4
+#define MISC    4
 
 &led_strip {
     chain-length = <27>;
@@ -73,7 +73,7 @@
         nav_layer {
             bindings = <
                 // &trans    &kp ESC   &trans    &tog 4    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
-                &trans    &kp ESC    &trans      &tog NUM  &trans    &kp K_PP  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
+                &trans    &kp ESC    &trans      &tog MISC &trans    &kp K_PP  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
                 &trans    &skq LSHFT &skq LCTRL  &skq LALT &skq LGUI &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
                 &trans    &trans     &trans      &trans    &trans    &trans    &kp RET   &trans    &kp PG_UP &kp PG_DN &trans    &trans
                                      &trans    &trans      &trans    &trans    &trans    &trans
@@ -91,13 +91,13 @@
             >;
         };
 
-        // lower_layer {
-        //     bindings = <
-        //         &trans     &trans        &trans        &tog 4        &trans        &trans    &trans &trans &trans &trans &trans &trans
-        //         &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &trans &trans &trans &trans &trans &trans
-        //         &rgb_ug RGB_TOG &rgb_ug RGB_OFF &rgb_ug RGB_ON &rgb_ug RGB_BRI &trans &trans &trans &trans &trans &trans &trans &trans
-        //                                                                 &trans &trans &trans &trans  &trans   &trans
-        //                 >;
-        //         };
+        misc_layer {
+            bindings = <
+                &trans &trans          &trans          &trans         &tog MISC       &trans        &trans &trans &trans &trans &trans &trans &trans
+                &trans &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3  &trans &trans &trans &trans &trans &trans &trans
+                &trans &rgb_ug RGB_TOG &rgb_ug RGB_OFF &rgb_ug RGB_ON &rgb_ug RGB_BRI &trans        &trans &trans &trans &trans &trans &trans &trans
+                                                                        &trans &trans &trans &trans &trans &trans
+            >;
+        };
     };
 };
