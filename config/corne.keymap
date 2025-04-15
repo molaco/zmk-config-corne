@@ -26,24 +26,24 @@
 };
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
-
-    behaviors {
-      skq: sticky_key_quick_release {
-        compatible = "zmk,behavior-sticky-key";
-        #binding-cells = <1>;
-        bindings = <&kp>;
-        release-after-ms = <1000>;
-        quick-release;
-        ignore-modifiers;
-      };
-    };
+    // conditional_layers {
+    //     compatible = "zmk,conditional-layers";
+    //     tri_layer {
+    //         if-layers = <1 2>;
+    //         then-layer = <3>;
+    //     };
+    // };
+    //
+    // behaviors {
+    //   skq: sticky_key_quick_release {
+    //     compatible = "zmk,behavior-sticky-key";
+    //     #binding-cells = <1>;
+    //     bindings = <&kp>;
+    //     release-after-ms = <1000>;
+    //     quick-release;
+    //     ignore-modifiers;
+    //   };
+    // };
 
     keymap {
         compatible = "zmk,keymap";
@@ -73,21 +73,42 @@
             bindings = <
                 // &trans    &kp ESC   &trans    &tog 4    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
                 &trans    &kp ESC   &trans    &trans    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
-                &trans    &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
+                &trans    &kp LSHFT &kp LCTRL &kp LALT  &kp LGUI  &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
                 &trans    &trans    &trans    &trans    &trans    &trans    &kp RET   &trans    &kp PGUP  &kp PGDN  &kp CAPS  &trans
                                     &trans    &trans    &trans      &trans    &trans    &trans
             >;
         };
 
-        // Number Layer (equivalent to _NUMB)
-        num_layer {
-            bindings = <
-                &trans    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
-                &trans    &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &kp F11   &kp F12   &kp PLUS  &kp EQUAL &kp ASTRK &trans    &trans
-                &trans    &kp F1    &kp F2    &kp F10   &kp DEL   &trans    &trans    &kp MINUS &trans    &trans    &trans    &trans
-                                    &trans    &trans    &trans      &trans    &trans    &trans
-            >;
-        };
+        // // Symbol Layer (equivalent to _SYM)
+        // sym_layer {
+        //     bindings = <
+        //         &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp FSLH  &kp LPAR  &kp RPAR  &kp QMARK &kp IEXC  &trans
+        //         &trans    &kp PIPE  &kp QUOT  &kp DQT   &kp SEMI  &kp COLON  &kp BSLH  &kp LBKT  &kp RBKT  &kp AMPS  &kp TILDE &trans
+        //         &trans    &kp LT    &kp GT    &trans    &kp MINUS &kp UNDER  &kp CARET &kp LBRC  &kp RBRC  &trans    &trans    &trans
+        //                             &trans    &trans     &trans      &trans    &trans    &trans
+        //     >;
+        // };
+        //
+        // // Navigation Layer (equivalent to _NAV)
+        // nav_layer {
+        //     bindings = <
+        //         // &trans    &kp ESC   &trans    &tog 4    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
+        //         &trans    &kp ESC   &trans    &trans    &trans    &kp MPLY  &kp BSPC  &trans    &kp HOME  &kp END   &trans    &trans
+        //         &trans    &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
+        //         &trans    &trans    &trans    &trans    &trans    &trans    &kp RET   &trans    &kp PGUP  &kp PGDN  &kp CAPS  &trans
+        //                             &trans    &trans    &trans      &trans    &trans    &trans
+        //     >;
+        // };
+        //
+        // // Number Layer (equivalent to _NUMB)
+        // num_layer {
+        //     bindings = <
+        //         &trans    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
+        //         &trans    &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &kp F11   &kp F12   &kp PLUS  &kp EQUAL &kp ASTRK &trans    &trans
+        //         &trans    &kp F1    &kp F2    &kp F10   &kp DEL   &trans    &trans    &kp MINUS &trans    &trans    &trans    &trans
+        //                             &trans    &trans    &trans      &trans    &trans    &trans
+        //     >;
+        // };
 
         // Placeholder for tri-layer activation (SYM + NAV -> NUMB)
         // ZMK doesn't natively support tri-layer, so we leave NUMB as a separate layer
