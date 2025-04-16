@@ -30,13 +30,13 @@
 };
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    // conditional_layers {
+    //     compatible = "zmk,conditional-layers";
+    //     tri_layer {
+    //         if-layers = <1 2>;
+    //         then-layer = <3>;
+    //     };
+    // };
 
     behaviors {
       skq: sticky_key_quick_release {
@@ -84,15 +84,15 @@
         };
 
 
-        // Number Layer (equivalent to _NUMB)
-        num_layer {
-            bindings = <
-                &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5    &kp N6    &kp N7      &kp N8    &kp N9    &kp N0 &trans
-                &trans    &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &kp F11   &kp F12   &kp KP_PLUS &kp EQUAL &kp ASTRK &none  &trans
-                &trans    &kp F1     &kp F2     &kp F10    &kp DEL    &none     &none     &kp MINUS   &none     &none     &none  &trans
-                                     &trans     &trans     &trans     &trans    &trans    &trans
-            >;
-        };
+        // // Number Layer (equivalent to _NUMB)
+        // num_layer {
+        //     bindings = <
+        //         &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5    &kp N6    &kp N7      &kp N8    &kp N9    &kp N0 &trans
+        //         &trans    &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &kp F11   &kp F12   &kp KP_PLUS &kp EQUAL &kp ASTRK &none  &trans
+        //         &trans    &kp F1     &kp F2     &kp F10    &kp DEL    &none     &none     &kp MINUS   &none     &none     &none  &trans
+        //                              &trans     &trans     &trans     &trans    &trans    &trans
+        //     >;
+        // };
 
         // misc_layer {
         //     bindings = <
