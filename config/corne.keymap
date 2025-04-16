@@ -62,16 +62,16 @@
             >;
         };
 
-        // // Symbol Layer (equivalent to _SYM)
-        // sym_layer {
-        //     bindings = <
-        //         &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp FSLH  &kp LPAR  &kp RPAR  &kp QMARK &none     &trans
-        //         &trans    &kp PIPE  &kp SQT   &kp DQT   &kp SEMI  &kp COLON  &kp BSLH  &kp LBKT  &kp RBKT  &kp AMPS  &kp TILDE &trans
-        //         &trans    &kp LT    &kp GT    &none     &kp MINUS &kp UNDER  &kp CARET &kp LBRC  &kp RBRC  &none     &none     &trans
-        //                             &trans    &trans    &trans    &trans     &trans    &trans
-        //     >;
-        // };
-        //
+        // Symbol Layer (equivalent to _SYM)
+        sym_layer {
+            bindings = <
+                &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp FSLH  &kp LPAR  &kp RPAR  &kp QMARK &none     &trans
+                &trans    &kp PIPE  &kp SQT   &kp DQT   &kp SEMI  &kp COLON  &kp BSLH  &kp LBKT  &kp RBKT  &kp AMPS  &kp TILDE &trans
+                &trans    &kp LT    &kp GT    &none     &kp MINUS &kp UNDER  &kp CARET &kp LBRC  &kp RBRC  &none     &none     &trans
+                                    &trans    &trans    &trans    &trans     &trans    &trans
+            >;
+        };
+
         // // Navigation Layer (equivalent to _NAV)
         // nav_layer {
         //     bindings = <
