@@ -10,12 +10,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/led/led.h>
-#include <dt-bindings/zmk/backlight.h>
+// #include <dt-bindings/zmk/outputs.h>
+// #include <dt-bindings/zmk/ext_power.h>
+// #include <dt-bindings/led/led.h>
+// #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/reset.h>
+// #include <dt-bindings/zmk/reset.h>
 // #include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
@@ -38,16 +38,16 @@
     //     };
     // };
 
-    behaviors {
-      skq: sticky_key_quick_release {
-        compatible = "zmk,behavior-sticky-key";
-        #binding-cells = <1>;
-        bindings = <&kp>;
-        release-after-ms = <1000>;
-        quick-release;
-        ignore-modifiers;
-      };
-    };
+    // behaviors {
+    //   skq: sticky_key_quick_release {
+    //     compatible = "zmk,behavior-sticky-key";
+    //     #binding-cells = <1>;
+    //     bindings = <&kp>;
+    //     release-after-ms = <1000>;
+    //     quick-release;
+    //     ignore-modifiers;
+    //   };
+    // };
 
     keymap {
         compatible = "zmk,keymap";
@@ -62,26 +62,26 @@
             >;
         };
 
-        // Symbol Layer (equivalent to _SYM)
-        sym_layer {
-            bindings = <
-                &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp FSLH  &kp LPAR  &kp RPAR  &kp QMARK &none     &trans
-                &trans    &kp PIPE  &kp SQT   &kp DQT   &kp SEMI  &kp COLON  &kp BSLH  &kp LBKT  &kp RBKT  &kp AMPS  &kp TILDE &trans
-                &trans    &kp LT    &kp GT    &none     &kp MINUS &kp UNDER  &kp CARET &kp LBRC  &kp RBRC  &none     &none     &trans
-                                    &trans    &trans    &trans    &trans     &trans    &trans
-            >;
-        };
-
-        // Navigation Layer (equivalent to _NAV)
-        nav_layer {
-            bindings = <
-                // &trans    &kp ESC    &none       &tog MOUSE &tog MISC &kp C_PP  &kp BSPC  &none     &kp HOME  &kp END   &none &none
-                &trans    &kp ESC    &none       &none      &none     &kp K_PP  &kp BSPC  &none     &kp HOME  &kp END   &none &none
-                &trans    &skq LSHFT &skq LCTRL  &skq LALT  &skq LGUI &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none &none
-                &trans    &none      &none       &none      &none     &none     &kp RET   &none     &kp PG_UP &kp PG_DN &CAPS &none
-                                     &trans      &trans     &trans    &trans    &trans    &trans
-            >;
-        };
+        // // Symbol Layer (equivalent to _SYM)
+        // sym_layer {
+        //     bindings = <
+        //         &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp FSLH  &kp LPAR  &kp RPAR  &kp QMARK &none     &trans
+        //         &trans    &kp PIPE  &kp SQT   &kp DQT   &kp SEMI  &kp COLON  &kp BSLH  &kp LBKT  &kp RBKT  &kp AMPS  &kp TILDE &trans
+        //         &trans    &kp LT    &kp GT    &none     &kp MINUS &kp UNDER  &kp CARET &kp LBRC  &kp RBRC  &none     &none     &trans
+        //                             &trans    &trans    &trans    &trans     &trans    &trans
+        //     >;
+        // };
+        //
+        // // Navigation Layer (equivalent to _NAV)
+        // nav_layer {
+        //     bindings = <
+        //         // &trans    &kp ESC    &none       &tog MOUSE &tog MISC &kp C_PP  &kp BSPC  &none     &kp HOME  &kp END   &none &none
+        //         &trans    &kp ESC    &none       &none      &none     &kp K_PP  &kp BSPC  &none     &kp HOME  &kp END   &none &none
+        //         &trans    &skq LSHFT &skq LCTRL  &skq LALT  &skq LGUI &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none &none
+        //         &trans    &none      &none       &none      &none     &none     &kp RET   &none     &kp PG_UP &kp PG_DN &CAPS &none
+        //                              &trans      &trans     &trans    &trans    &trans    &trans
+        //     >;
+        // };
 
 
         // // Number Layer (equivalent to _NUMB)
