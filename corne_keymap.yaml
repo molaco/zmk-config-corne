@@ -4,7 +4,7 @@ layers:
   - [ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC]
   - [LSHFT, A, S, D, F, G, H, J, K, L, '~', RET]
   - [LCTRL, Z, X, C, V, B, N, M, ',', ., /, CAPS]
-  - [LCTRL, nav, LCTRL, SPACE, sym, SPACE]
+  - [LSHFT, nav, LCTRL, SPACE, sym, RET]
   sym:
   - - {t: ▽, type: trans}
     - '!'
@@ -16,7 +16,7 @@ layers:
     - (
     - )
     - '?'
-    - {t: ▽, type: trans}
+    - ''
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - '|'
@@ -33,14 +33,14 @@ layers:
   - - {t: ▽, type: trans}
     - <
     - '>'
-    - {t: ▽, type: trans}
+    - ''
     - '-'
     - _
     - ^
     - '{'
     - '}'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
+    - ''
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -51,16 +51,16 @@ layers:
   nav:
   - - {t: ▽, type: trans}
     - ESC
-    - {t: ▽, type: trans}
+    - {t: mouse, h: toggle}
     - {t: misc, h: toggle}
-    - {t: ▽, type: trans}
+    - ''
     - PP
     - BSPC
-    - {t: ▽, type: trans}
+    - ''
     - HOME
     - END
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
+    - ''
   - - {t: ▽, type: trans}
     - {t: LSHFT, h: sticky}
     - {t: LCTRL, h: sticky}
@@ -71,20 +71,20 @@ layers:
     - DOWN
     - UP
     - RIGHT
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
+    - ''
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
     - RET
-    - {t: ▽, type: trans}
+    - ''
     - PG UP
     - PG DN
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - CAPS
+    - ''
   - - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
@@ -114,19 +114,19 @@ layers:
     - KP PLUS
     - '='
     - '*'
-    - {t: ▽, type: trans}
+    - ''
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - F1
     - F2
     - F10
     - DEL
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
+    - ''
     - '-'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
+    - ''
+    - ''
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {type: held}
@@ -135,45 +135,45 @@ layers:
     - {type: held}
     - {t: ▽, type: trans}
   misc:
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: qwerty, h: toggle}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
+  - - ''
+    - ''
+    - ''
+    - {t: misc, h: toggle}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
     - BT CLR
     - {t: BT, h: '0'}
     - {t: BT, h: '1'}
     - {t: BT, h: '2'}
     - {t: BT, h: '3'}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - RGB TOG
-    - RGB OFF
-    - RGB ON
-    - RGB BRI
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - ['', RGB TOG, RGB OFF, RGB ON, RGB BRI, '', '', '', '', '', '', '']
+  - ['', '', '', '', '', '']
+  mouse:
+  - - ''
+    - ''
+    - {t: mouse, h: toggle}
+    - '&mmv MOVE_UP'
+    - ''
+    - '&msc SCRL_UP'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - ['', '', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '&msc SCRL_DOWN', '', '', '', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', '&mkp MB1', '&mkp MB2', '', '', '']
