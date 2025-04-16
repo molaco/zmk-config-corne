@@ -30,13 +30,13 @@
 // };
 
 / {
-    // conditional_layers {
-    //     compatible = "zmk,conditional-layers";
-    //     tri_layer {
-    //         if-layers = <1 2>;
-    //         then-layer = <3>;
-    //     };
-    // };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 
     behaviors {
       skq: sticky_key_quick_release {
@@ -75,8 +75,8 @@
         // Navigation Layer (equivalent to _NAV)
         nav_layer {
             bindings = <
-                // &trans    &kp ESC    &none       &tog MOUSE &tog MISC &kp C_PP  &kp BSPC  &none     &kp HOME  &kp END   &none &none
-                &trans    &kp ESC    &none       &none      &none     &kp K_PP  &kp BSPC  &none     &kp HOME  &kp END   &none    &none
+                &trans    &kp ESC    &none       &tog MOUSE &tog MISC &kp C_PP  &kp BSPC  &none     &kp HOME  &kp END   &none &none
+                // &trans    &kp ESC    &none       &none      &none     &kp K_PP  &kp BSPC  &none     &kp HOME  &kp END   &none    &none
                 &trans    &skq LSHFT &skq LCTRL  &skq LALT  &skq LGUI &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &none
                 &trans    &none      &none       &none      &none     &none     &kp RET   &none     &kp PG_UP &kp PG_DN &kp CAPS &none
                                      &trans      &trans     &trans    &trans    &trans    &trans
@@ -84,32 +84,32 @@
         };
 
 
-        // // Number Layer (equivalent to _NUMB)
-        // num_layer {
-        //     bindings = <
-        //         &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5    &kp N6    &kp N7      &kp N8    &kp N9    &kp N0 &trans
-        //         &trans    &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &kp F11   &kp F12   &kp KP_PLUS &kp EQUAL &kp ASTRK &none  &trans
-        //         &trans    &kp F1     &kp F2     &kp F10    &kp DEL    &none     &none     &kp MINUS   &none     &none     &none  &trans
-        //                              &trans     &trans     &trans     &trans    &trans    &trans
-        //     >;
-        // };
+        // Number Layer (equivalent to _NUMB)
+        num_layer {
+            bindings = <
+                &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5    &kp N6    &kp N7      &kp N8    &kp N9    &kp N0 &trans
+                &trans    &skq LSHFT &skq LCTRL &skq LALT  &skq LGUI  &kp F11   &kp F12   &kp KP_PLUS &kp EQUAL &kp ASTRK &none  &trans
+                &trans    &kp F1     &kp F2     &kp F10    &kp DEL    &none     &none     &kp MINUS   &none     &none     &none  &trans
+                                     &trans     &trans     &trans     &trans    &trans    &trans
+            >;
+        };
 
-        // misc_layer {
-        //     bindings = <
-        //         &none &none           &none           &none          &tog DEFAULT    &none        &none &none &none &none &none &none
-        //         &none &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3 &none &none &none &none &none &none
-        //         &none &rgb_ug RGB_TOG &rgb_ug RGB_OFF &rgb_ug RGB_ON &rgb_ug RGB_BRI &none        &none &none &none &none &none &none
-        //                                                                  &none &none &none        &none &none &none
-        //     >;
-        // };
+        misc_layer {
+            bindings = <
+                &none &none           &none           &none          &tog DEFAULT    &none        &none &none &none &none &none &none
+                &none &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3 &none &none &none &none &none &none
+                &none &rgb_ug RGB_TOG &rgb_ug RGB_OFF &rgb_ug RGB_ON &rgb_ug RGB_BRI &none        &none &none &none &none &none &none
+                                                                         &none &none &none        &none &none &none
+            >;
+        };
 
-        // mouse_layer {
-        //     bindings = <
-        //          &none &none &none          &mmv MOVE_UP   &none           &msc SCRL_UP     &none &none &none &none &none &none
-        //          &none &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN   &none &none &none &none &none &none 
-        //          &none &none &none          &none          &none           &none            &none &none &none &none &none &none 
-        //                                     &none          &MB1            &MB2             &none &none &none
-        //     >;
-        // };
+        mouse_layer {
+            bindings = <
+                 &none &none &none          &mmv MOVE_UP   &none           &msc SCRL_UP     &none &none &none &none &none &none
+                 &none &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN   &none &none &none &none &none &none 
+                 &none &none &none          &none          &none           &none            &none &none &none &none &none &none 
+                                            &none          &MB1            &MB2             &none &none &none
+            >;
+        };
     };
 };
