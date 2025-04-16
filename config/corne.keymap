@@ -103,13 +103,13 @@
             >;
         };
 
-        mouse_layer {
-            bindings = <
-                 &none &none &none          &mmv MOVE_UP   &none           &msc SCRL_UP     &none &none &none &none &none &none
-                 &none &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN   &none &none &none &none &none &none 
-                 &none &none &none          &none          &none           &none            &none &none &none &none &none &none 
-                                            &none          &MB1            &MB2             &none &none &none
-            >;
-        };
+        // mouse_layer {
+        //     bindings = <
+        //          &none &none &none          &mmv MOVE_UP   &none           &msc SCRL_UP     &none &none &none &none &none &none
+        //          &none &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN   &none &none &none &none &none &none 
+        //          &none &none &none          &none          &none           &none            &none &none &none &none &none &none 
+        //                                     &none          &MB1            &MB2             &none &none &none
+        //     >;
+        // };
     };
 };
