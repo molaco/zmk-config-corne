@@ -29,7 +29,7 @@
 
 // Row 1
 #define ES_MORD &kp GRAVE     // º
-#define ES_QUOT &kp MINUS     // '
+#define ES_SQT &kp MINUS     // '
 #define ES_IEXL &kp EQUAL     // ¡
 // Row 2
 #define ES_GRAVE &kp LBKT     // ` (dead)
@@ -75,7 +75,7 @@
 #define ES_QMARK &kp LS(MINUS) // ?
 #define ES_IQMARK &kp LS(EQUAL) // ¿
 // Row 2
-#define ES_CIRC &kp LS(LBKT)  // ^ (dead)
+#define ES_CARET &kp LS(LBKT)  // ^ (dead)
 #define ES_ASTRK &kp LS(RBKT)  // *
 // Row 3
 #define ES_DIAE &kp LS(APOS)  // ¨ (dead)
@@ -103,7 +103,7 @@
  */
 
 // Row 1
-#define ES_BSLS &kp RA(GRAVE)  // "\"
+#define ES_BSLH &kp RA(GRAVE)  // "\"
 #define ES_PIPE &kp RA(N1)    // |
 #define ES_AT   &kp RA(N2)    // @
 #define ES_HASH &kp RA(N3)    // #
