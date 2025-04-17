@@ -71,8 +71,9 @@
                 &trans &kp LS(N1) &kp RA(N2)    &kp RA(N3) &kp LS(N4)    &kp LS(N5)    &kp LS(N7)    &kp LS(N8)   &kp LS(N9)   &kp LS(MINUS) &kp LS(EQUAL) &trans
                 // &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp FSLH  &kp LPAR  &kp RPAR  &kp QMARK &none     &trans
                 &trans &kp RA(N1) &kp MINUS     &kp LS(N2) &kp LS(COMMA) &kp LS(DOT)   &kp RA(GRAVE) &kp RA(LBKT) &kp RA(RBKT) &kp LS(N6)    &kp RA(N4)    &trans
-                &trans &kp GRAVE  &kp LS(GRAVE) &none      &kp SLASH     &kp LS(SLASH) &kp LS(LBKT)  &kp RA(APOS) &kp RA(BSLH) &none         &none         &trans
-                                    &trans    &trans    &trans    &trans     &trans    &trans
+                &trans &kp NUBS   &kp LS(NUBS)  &none      &kp SLASH     &kp LS(SLASH) &kp LS(LBKT)  &kp RA(APOS) &kp RA(BSLH) &none         &none         &trans
+                                                &trans     &trans        &trans        &trans        &trans        &trans
+                
             >;
         };
 
