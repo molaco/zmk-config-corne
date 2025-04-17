@@ -17,7 +17,7 @@
 // #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/reset.h>
 #include <dt-bindings/zmk/pointing.h>
-#include "./spanish_keymap.h"
+#include "spanish_keymap.h"
 
 #define DEFAULT 0
 #define SYM     1
@@ -59,7 +59,8 @@
                 &kp ESC   &kp Q     &kp W     &kp E     &kp R      &kp T       &kp Y     &kp U     &kp I        &kp O      &kp P        &kp BSPC
                 &kp LSHFT &kp A     &kp S     &kp D     &kp F      &kp G       &kp H     &kp J     &kp K        &kp L      &kp ES_NTIL  &kp RET
                 // &kp LSHFT &kp A     &kp S     &kp D     &kp F      &kp G       &kp H     &kp J     &kp K     &kp L     &kp TILDE &kp RET
-                &kp LCTRL &kp Z     &kp X     &kp C     &kp V      &kp B       &kp N     &kp M     &kp ES_COMMA &kp ES_DOT &kp ES_TILD  &kp CAPS
+                &kp LCTRL &kp Z     &kp X     &kp C     &kp V      &kp B       &kp N     &kp M     &kp ES_COMMA &kp ES_DOT &kp FSLH  &kp CAPS
+                // &kp LCTRL &kp Z     &kp X     &kp C     &kp V      &kp B       &kp N     &kp M     &kp ES_COMMA &kp ES_DOT &kp ES_TILD  &kp CAPS
                 // &kp LCTRL &kp Z     &kp X     &kp C     &kp V      &kp B       &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp CAPS
                                     &kp LSHFT &mo NAV   &kp LCTRL  &kp SPACE   &mo SYM   &kp RET
             >;
