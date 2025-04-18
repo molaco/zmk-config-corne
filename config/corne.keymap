@@ -103,8 +103,8 @@
             bindings = <
                 &none &none           &none           &tog MISC      &none           &none        &none &none &none &none &none &none
                 &none &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3 &none &none &none &none &none &none
-                // &none &rgb_ug RGB_TOG &rgb_ug RGB_OFF &rgb_ug RGB_ON &rgb_ug RGB_BRI &none        &none &none &none &none &none &none
-                &none &none           &none           &none          &none           &none        &none &none &none &none &none &none
+                &none &rgb_ug RGB_TOG &rgb_ug RGB_OFF &rgb_ug RGB_ON &rgb_ug RGB_BRI &none        &none &none &none &none &none &none
+                // &none &none           &none           &none          &none           &none        &none &none &none &none &none &none
                                                                          &none &none &none        &none &none &none
             >;
         };
