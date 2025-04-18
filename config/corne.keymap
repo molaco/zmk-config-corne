@@ -26,9 +26,9 @@
 #define MISC    4
 #define MOUSE   5
 
-&led_strip {
-    chain-length = <27>;
-};
+// &led_strip {
+  //  chain-length = <27>;
+// };
 
 / {
     conditional_layers {
