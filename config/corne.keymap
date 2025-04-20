@@ -128,9 +128,9 @@
         blue_layer {
             display-name = "BLUE"; 
             bindings = <
-                &none &none           &none           &none          &tog BLUE       &none           &none &none &none &none &none &none
-                &none &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &none &none &none &none &none &none
-                &none &none           &none           &none          &none           &none           &none &none &none &none &none &none
+                &none &none           &none           &none          &tog BLUE       &none           &none &none &none &none &studio_unlock &none
+                &none &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &none &none &none &none &none          &none
+                &none &none           &none           &none          &none           &none           &none &none &none &none &none          &none
                 // &none &none           &none           &none          &none           &none        &none &none &none &none &none &none
                                                                          &none &none &none        &none &none &none
             >;
