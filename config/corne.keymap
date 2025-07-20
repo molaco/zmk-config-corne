@@ -26,6 +26,8 @@
 // #define MISC    4
 #define MOUSE   4
 #define BLUE    5
+#define GAME1   6
+#define GAME2   7
 
 &led_strip {
   chain-length = <27>;
@@ -84,7 +86,7 @@
         nav_layer {
             display-name = "NAV"; 
             bindings = <
-                &trans    &kp ESC    &tog MOUSE  &tog BLUE  &none     &kp C_PP  &kp BSPC  &none     &kp HOME  &kp END   &none &none
+                &trans    &kp ESC    &tog MOUSE  &tog GAME1 &none     &kp C_PP  &kp BSPC  &none     &kp HOME  &kp END   &none &none
                 // &trans    &kp ESC    &none       &none      &none     &kp K_PP  &kp BSPC  &none     &kp HOME  &kp END   &none    &none
                 &trans    &skq LSHFT &skq LCTRL  &skq LALT  &skq LGUI &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &none
                 &trans    &none      &none       &none      &none     &none     &kp RET   &none     &kp PG_UP &kp PG_DN &kp CAPS &none
@@ -133,6 +135,26 @@
                 &none &none           &none           &none          &none           &none           &none &none &none &none &none          &none
                 // &none &none           &none           &none          &none           &none        &none &none &none &none &none &none
                                                                          &none &none &none        &none &none &none
+            >;
+        };
+
+        game1_layer {
+            display-name = "GAME1";
+            bindings = <
+                &none &none     &kp Q     &kp W     &kp E     &kp R     &tog GAME1 &none &none &none &none &none
+                &none &kp LSHFT &kp A     &kp S     &kp D     &kp F     &none      &none &none &none &none &none
+                &none &kp LCTRL &kp Z     &kp G     &kp C     &kp V     &none      &none &none &none &none &none
+                                          &kp LCTRL &kp SPACE &mo GAME2 &kp ESC    &none &none
+            >;
+        };
+
+        game2_layer {
+            display-name = "GAME2";
+            bindings = <
+                &none &kp N1   &kp N2 &none &kp N3 &none   &none &none &none &none &none &none
+                &none &kp N4   &none  &none &none  &kp TAB &none &none &none &none &none &none
+                &none &kp LALT &none  &none &kp B  &kp M   &none &none &none &none &none &none
+                                      &none &trans &none   &none &none &none
             >;
         };
     };
