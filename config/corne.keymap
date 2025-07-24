@@ -53,11 +53,15 @@
       };
 
       space_crouch: space_crouch_macro {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp SPACE>, <&kp LCTRL>;
-        wait-ms = <7>;
-        tap-ms = <10>;
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = 
+              <&macro_press &kp SPACE>,  // Press and hold SPACE
+              <&macro_wait_time 7>,      // Wait 7ms (adjust for your FPS)
+              <&macro_press &kp LCTRL>,  // Press and hold LCTRL
+              <&macro_pause_for_release>,// Optional: Pause until you release the physical key (useful if holding the macro key)
+              <&macro_release &kp LCTRL>,// Release LCTRL
+              <&macro_release &kp SPACE>;// Release SPACE
       };
     };
 
