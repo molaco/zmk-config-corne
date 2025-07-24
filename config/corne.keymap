@@ -52,15 +52,25 @@
         ignore-modifiers;
       };
 
+      // space_crouch: space_crouch_macro {
+      //     compatible = "zmk,behavior-macro";
+      //     #binding-cells = <0>;
+      //     bindings = 
+      //         <&macro_press &kp SPACE>,  // Press and hold SPACE
+      //         <&macro_release &kp SPACE>;// Release SPACE
+      //         <&macro_wait_time 7>,      // Wait 7ms (adjust for your FPS)
+      //         <&macro_press &kp LCTRL>,  // Press and hold LCTRL
+      //         <&macro_release &kp LCTRL>,// Release LCTRL
+      //         // <&macro_pause_for_release>,// Optional: Pause until you release the physical key (useful if holding the macro key)
+      // };
+
       space_crouch: space_crouch_macro {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
+          wait-ms = <7>;
           bindings = 
-              <&macro_press &kp SPACE>,  // Press and hold SPACE
-              <&macro_release &kp SPACE>;// Release SPACE
-              <&macro_wait_time 7>,      // Wait 7ms (adjust for your FPS)
-              <&macro_press &kp LCTRL>,  // Press and hold LCTRL
-              <&macro_release &kp LCTRL>,// Release LCTRL
+              <&kp SPACE>,  // Press and hold SPACE
+              <&kp LCTRL>,  // Press and hold LCTRL
               // <&macro_pause_for_release>,// Optional: Pause until you release the physical key (useful if holding the macro key)
       };
     };
