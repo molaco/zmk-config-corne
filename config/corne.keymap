@@ -59,7 +59,7 @@
           tap-ms = <0>;
           bindings = 
               <&macro_press &kp SPACE>,  // Press and hold SPACE
-              <&macro_wait_time 10>,      // Wait 7ms (adjust for your FPS)
+              <&macro_wait_time 5>,      // Wait 7ms (adjust for your FPS)
               <&macro_release &kp SPACE>,// Release SPACE
               <&macro_wait_time 7>,      // Wait 7ms (adjust for your FPS)
               <&macro_press &kp LCTRL>,  // Press and hold LCTRL
