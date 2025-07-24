@@ -51,6 +51,14 @@
         quick-release;
         ignore-modifiers;
       };
+
+      space_crouch: space_crouch_macro {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp SPACE>, <&kp LCTRL>;
+        wait-ms = <7>;
+        tap-ms = <10>;
+      };
     };
 
     keymap {
@@ -141,10 +149,10 @@
         game1_layer {
             display-name = "GAME1";
             bindings = <
-                &none &none     &kp Q     &kp W     &kp E     &kp R     &tog GAME1 &none &none &none &none &none
-                &none &kp LSHFT &kp A     &kp S     &kp D     &kp F     &none      &none &none &none &none &none
-                &none &kp LCTRL &kp Z     &kp G     &kp C     &kp V     &none      &none &none &none &none &none
-                                          &mo GAME2 &kp LCTRL &kp SPACE &kp ESC    &none &none
+                &none &kp N1    &kp Q     &kp W     &kp E     &kp R               &tog GAME1 &none &none &none &none &none
+                &none &kp LSHFT &kp A     &kp S     &kp D     &kp F               &none      &none &none &none &none &none
+                &none &kp LCTRL &kp Z     &kp G     &kp C     &kp V               &none      &none &none &none &none &none
+                                          &mo GAME2 &kp SPACE &space_crouch_macro &kp ESC    &none &none
             >;
         };
 
