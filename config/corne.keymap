@@ -112,9 +112,9 @@
         nav_layer {
             display-name = "NAV"; 
             bindings = <
-                &trans    &kp ESC    &tog MOUSE  &tog GAME1 &none     &kp C_PP  &kp BSPC  &none     &kp HOME  &kp END   &none &none
+                &trans    &kp ESC    &tog MOUSE  &tog GAME1 &tog BLUE &kp C_PP  &kp BSPC  &none     &kp HOME  &kp END   &none &none
                 // &trans    &kp ESC    &none       &none      &none     &kp K_PP  &kp BSPC  &none     &kp HOME  &kp END   &none    &none
-                &trans    &skq LSHFT &skq LCTRL  &skq LALT  &skq LGUI &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &none
+                &trans    &skq LSHFT &skq LCTRL  &skq LALT  &kp LGUI  &kp TAB   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &none
                 &trans    &none      &none       &none      &none     &none     &kp RET   &none     &kp PG_UP &kp PG_DN &kp CAPS &none
                                      &trans      &trans     &trans    &trans    &trans    &trans
             >;
@@ -156,7 +156,7 @@
         blue_layer {
             display-name = "BLUE"; 
             bindings = <
-                &none &none           &none           &tog BLUE      &none           &none           &none &none &none &none &studio_unlock &none
+                &none &none           &none           &none          &tog BLUE       &none           &none &none &none &none &studio_unlock &none
                 &none &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &none &none &none &none &none          &none
                 &none &none           &none           &none          &none           &none           &none &none &none &none &none          &none
                 // &none &none           &none           &none          &none           &none        &none &none &none &none &none &none
